@@ -26,11 +26,7 @@ class EmailController < ApplicationController
     data = template_data[stack][experience]
 
     if data
-      SendGridMailer.new.to(email).add_template(
-        template_id: '', # TODO: Add template id
-        data: { name:, **data }
-      ).send
-
+      WelcomeMailer.with(name:, task_link: data[:task_link], email:).welcome_email.deliver_now!
       render json: { message: "Email sent successfully to #{email}" }, status: :ok
     else
       render json: { error: 'Invalid stack or experience' }, status: :unprocessable_entity
