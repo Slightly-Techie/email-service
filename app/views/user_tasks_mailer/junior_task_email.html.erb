@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta content='text/html; charset=UTF-8' http-equiv='Content-Type' />
+  </head>
+  <body>
+    <p>Hello <%= @user.name %>,</p>
+    <p>Thank you for applying to be a part of the slightly techie network! As a part of our selection process, we send challenges to candidates, and you are one of them!</p>
+
+    <p>In this email, you will find the challenge itself as well as instructions about how to complete it. Please make sure to read all the instructions as they will help you complete the challenge more successfully.</p>
+
+    <p>To access the tasks specific to your tech stack, please refer to the Google folder attached to this email. Inside the folder, you will find detailed descriptions of each challenge, along with any necessary resources. Please select and complete the challenge that aligns with your tech stack.</p> <strong> You are permitted to do only one challenge </strong>
+
+    <p>Once you have selected a challenge, proceed with completing it according to the provided instructions. After you finish the challenge, reply to this email with a link to the project on GitHub. If applicable, also include a link to a deployed version of your project.</p>
+    <p>A member from our team will review your code and evaluate your solution. We will then reach out to you for a follow-up conversation where we can discuss your solution and go over the project in more detail.</p>
+    <p>Feel free to point us to interesting pieces of code or areas that you would like to improve over time. We are excited to see your work!</p>
+    <strong>Please note that the challenge should not take longer than a week to complete.</strong>
+    <p>Time to get started. Happy Coding.</p>
+
+    <hr />
+    <p><strong>Here is the link to your challenge:</strong></p>
+    <p><a href="<%= @challenge_link %>"><%= @challenge_link %></a></p>
+    <hr />
+
+    <p>Best regards,</p>
+    <p>Slightly Techie</p>
+  </body>
+</html>
+
+

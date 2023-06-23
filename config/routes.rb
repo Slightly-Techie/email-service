@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
   root to: 'application#healthcheck'
-
-  post '/welcome-email', to: 'email#welcome'
+  post '/task-email', to: 'task#send_task_email'
 end
