@@ -1,4 +1,6 @@
 class UserTasksMailer < ApplicationMailer
+  default from: 'Essilfie from Slightly Techie'
+
   def junior_task_email(user)
     @user = user
     @challenge_link = 'https://drive.google.com/drive/folders/1SccB7-_qtM89Xk-HJhmyONNFdls-I7HV'

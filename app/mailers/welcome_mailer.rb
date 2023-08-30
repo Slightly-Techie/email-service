@@ -1,5 +1,6 @@
 class WelcomeMailer < ApplicationMailer
-  default from: 'Slightly Techie'
+  default from: 'Essilfie from Slightly Techie'
+
   def welcome_email
     @name = params[:name]
     @challenge_link = params[:task_link]
