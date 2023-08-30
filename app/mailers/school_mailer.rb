@@ -7,8 +7,8 @@ class SchoolMailer < ApplicationMailer
     mail(
       to: params[:email_address],
       reply_to: 'slightly.techie@gmail.com',
-      subject: 'Welcome to the Slightly Techie Network!!',
-      bcc: 'bquansah007@gmail.com'
+      subject: "Invitation to SlightlyTechie School's Orientation",
+      bcc: 'korantengsarah33@gmail.com'
     )
   end
 end
