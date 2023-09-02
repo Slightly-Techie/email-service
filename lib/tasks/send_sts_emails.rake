@@ -4,6 +4,7 @@ namespace :emails do
     require 'csv'
 
     csv_path = Rails.root.join('db', 'seeds', 'sts_students.csv')
+    counter = 0
 
     CSV.foreach(csv_path, headers: true) do |row|
       name = row['Full name']
@@ -12,6 +13,9 @@ namespace :emails do
       SchoolMailer.with(full_name: name, email_address: email).onboarding_email.deliver_now
 
       puts "Sent email to #{name} at #{email}"
+      counter += 1
     end
+
+    puts "Total emails sent: #{counter}"
   end
 end
